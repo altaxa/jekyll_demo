@@ -1,21 +1,14 @@
-<<<<<<< HEAD
---- layout: default title: �ҵ�Blog Chinese version ---
-=======
---- layout: default title: 我的Blog ---
->>>>>>> edd679f59f70722eeb4fc70190b321716c7db0d9
-
---- layout: default title: �ҵ�Blog Chinese version ---
-
+---
+　　layout: default
+　　title: 我的Blog
+---
+　　
 <h2>{{ page.title }}</h2>
-
-<p>欢迎你</p>
-
+　
+<p>最新文章</p>
+　　
 <ul>
-
-    {% for post in site.posts %}
-
-        <li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-
-    {% endfor %}
-
+	{% for post in site.posts %}
+　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+　　　　{% endfor %}　　
 </ul>
